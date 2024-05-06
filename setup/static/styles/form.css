@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 935px;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    column-gap: 1.25rem;
+    margin: 120px auto 0;
+    align-items: center;
+}
+
+.pitch {
+    height: 618px;
+    position: relative;
+    background: url('../assets/home-phones.png') no-repeat center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.pitch img {
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.pitch img.active {
+    opacity: 1;
+}
+
+.print {
+    position: absolute;
+    top: 25px;
+    left: 207.5px;
+    border-radius: 30px;
+    height: 530px;
+}
+
+form {
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #ffff;
+    padding: 1.25rem 2.5rem;
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+input {
+    height: 2.25rem;
+    font-size: 0.875rem;
+    border-radius: 3px;
+    color: #262626 ;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+    margin-bottom: 0.25rem;
+    padding: 0 0.5rem;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    height: 30px;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: #0195f6;
+    margin-top: 0.75rem;
+} &:disabled {
+    background-color: #b2dffc ;
+}

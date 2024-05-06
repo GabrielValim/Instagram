@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/inicio.css' %}">
+    <script src="{% static 'scripts/inicio.js' %}" defer></script>
+    <title>Inicio</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Analisador de Engajamento do <span>Instagram</span>!</h1>
+        <p>
+            Estamos preparando tudo para analisar os dados da sua conta do Instagram.
+            Por favor, faça login com suas credenciais para prosseguir.
+        </p>
+
+        <a id="start-scraping" class="botao" href="{% url 'login' %}";">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Fazer Login
+        </a>
+
+    </div>
+</body>
+</html>
+

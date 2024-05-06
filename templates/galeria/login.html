@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+    <title>Instagram</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="pitch">
+            <img class="first print active" src="{% static 'assets/screenshot1.png' %}" alt="primeira_imagem">
+            <img class="second print" src="{% static 'assets/screenshot2.png' %}" alt="segunda_imagem">
+            <img class="third print" src="{% static 'assets/screenshot3.png' %}" alt="terceira_imagem">
+            <img class="fourt print" src="{% static 'assets/screenshot4.png' %}" alt="quarta_imagem">
+        </div>
+        <div class="form">
+            <form method="post"  action="{% url 'inicio_view' %}">
+                {% csrf_token %}
+                <img class="logo" src="{% static 'assets/Instagram_logo.png' %}" alt="Instagram Logo">
+                <input type="text" name="username" placeholder="Telefone, nome de usúario ou email" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
